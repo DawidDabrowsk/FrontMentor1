@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(66, 71, 92);
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 45%;
+  background-color: #fff;
+}
+
+.wrapper,
+.img-box {
+  border-radius: 20px;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 55%;
+  padding: 7% 6%;
+}
+.text-box h1 {
+  font-size: 44px;
+}
+.text-box .info {
+  margin: 5% 0;
+}
+.text-box .info,
+.text-box .prod {
+  font-size: 14px;
+  color: grey;
+}
+.text-box img {
+  width: 15px;
+  height: 15px;
+  margin-right: 6%;
+}
+.text-box .email-style {
+  display: flex;
+}
+.text-box .email-style .valid-error,
+.text-box .email-style .email {
+  width: 50%;
+  margin: 8% 0 2%;
+  font-size: 12px;
+}
+.text-box .email-style .valid-error {
+  display: none;
+  justify-content: flex-end;
+  color: rgba(255, 0, 0, 0.5);
+  font-weight: bold;
+}
+.text-box input,
+.text-box .subscribe-btn {
+  padding: 4%;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid rgb(236, 235, 235);
+}
+.text-box .prod {
+  display: flex;
+  align-items: center;
+  margin: 1% 0;
+}
+.text-box .subscribe-btn {
+  margin-top: 5%;
+  background-color: rgb(26, 26, 73);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.text-box input::-moz-placeholder {
+  padding-left: 3%;
+  color: rgba(0, 0, 0, 0.5);
+}
+.text-box input::placeholder {
+  padding-left: 3%;
+  color: rgba(0, 0, 0, 0.5);
+}
+.text-box .wrong-email {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.text-box .wrong-email::-moz-placeholder {
+  color: rgba(255, 0, 0, 0.5);
+}
+.text-box .wrong-email::placeholder {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.img-box {
+  height: 94%;
+  width: 45%;
+  margin: 2%;
+  background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.popup {
+  position: absolute;
+  left: -1000px;
+  padding: 2% 3%;
+  height: 50vh;
+  width: 20vw;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.popup img {
+  display: block;
+  height: 15%;
+}
+.popup h1 {
+  margin: 8% 0;
+  font-weight: bold;
+}
+.popup .subscribe-info {
+  font-size: 14px;
+  line-height: 18px;
+}
+.popup .dismiss-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 0;
+  width: 100%;
+  height: 15%;
+  background-color: rgb(26, 26, 73);
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-anim {
+  animation: popupAnim 1s ease-out forwards;
+}
+
+.popup-anim-back {
+  animation: animBack 1s ease-out forwards;
+}
+
+@keyframes popupAnim {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(1600px);
+  }
+}
+@keyframes animBack {
+  from {
+    transform: translate(1600px);
+  }
+  to {
+    transform: translate(0);
+  }
+}/*# sourceMappingURL=style.css.map */
